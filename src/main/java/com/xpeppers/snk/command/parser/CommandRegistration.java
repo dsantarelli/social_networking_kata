@@ -9,18 +9,18 @@ public class CommandRegistration {
     private final String name;
     private final String syntax;
     private final Function<String, Boolean> matchLineFn;
-    private final Function<String, ICommand> createCommandFn;
+    private final Function<String, ICommand> factoryFn;
 
     public CommandRegistration(
             String name, 
             String syntax, 
             Function<String, Boolean> matchLineFn,
-            Function<String, ICommand> createCommandFn) {
+            Function<String, ICommand> factoryFn) {
         
         this.name = name;
         this.syntax = syntax;
         this.matchLineFn = matchLineFn;
-        this.createCommandFn = createCommandFn;
+        this.factoryFn = factoryFn;
     }
 
     public String getName() {
@@ -35,7 +35,7 @@ public class CommandRegistration {
         return matchLineFn;
     }
 
-    public Function<String, ICommand> getCommandFactoryFn() {
-        return createCommandFn;
+    public Function<String, ICommand> getFactoryFn() {
+        return factoryFn;
     }
 }

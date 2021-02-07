@@ -42,13 +42,13 @@ The application starts through the [App](https://github.com/dsantarelli/social_n
 
 ### Improvements
 
-* In the [CommandParser](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/CommandParser.java), I didn't want to implement the usual factory with a lot of `if/else`, so I tried to introduce a [ICommandRegistry](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/ICommandRegistry.java) interface. The aim was to find a more flexible solution so that the command configurations could be injected into the parser from an external source. The overall architecture could be summarized through the following image:
+* In the [CommandParser](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/CommandParser.java), I didn't want to implement the usual factory with a lot of `if/else`, so I tried to introduce a [CommandRegistry](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/CommandRegistry.java). The aim was to find a more flexible solution so that the command configurations could be injected into the parser from an external source. The overall architecture could be summarized through the following image:
 
 ![](kata.png)
 
-* I added the [Help](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/HelpCommand.java) and [Exit](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/ExitCommand.java) commands. They came for free. In particular, I suddenly realized that the Help could print the list of available commands exposed by the ICommandRegistry. Cool!
+* I added the [Help](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/HelpCommand.java) and [Exit](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/ExitCommand.java) commands. They came for free. In particular, I suddenly realized that the Help could print the list of the available commands exposed by the CommandRegistry. Cool!
 
-* In order to print the `n <chrono unit> ago` format, I wanted to use [PrettyTime](https://www.ocpsoft.org/prettytime/), but I wanted to practice so I fell back on a [simple homemade solution](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/text/PrettyTimeFormatter.java).
+* In order to print the `n <chrono unit> ago` format, at first I wanted to use [PrettyTime](https://www.ocpsoft.org/prettytime/), but in the end I wanted to practice so I fell back on a [simple homemade solution](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/text/PrettyTimeFormatter.java).
 
 ### Demo
 
