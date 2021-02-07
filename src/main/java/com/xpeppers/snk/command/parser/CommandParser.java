@@ -19,7 +19,6 @@ public class CommandParser implements ICommandParser {
                  .filter(x -> x.getMatchLineFn().apply(line)) 
                  .map(x -> x.getCommandFactoryFn().apply(line))
                  .findFirst()
-                 .orElseThrow(() -> new UnknownCommandException(
-                         MessageFormat.format("command not supported: \"{0}\"", line)));        
+                 .orElseThrow(() -> new UnknownCommandException(MessageFormat.format("command not supported: \"{0}\"", line)));        
     }           
 }
