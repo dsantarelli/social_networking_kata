@@ -20,11 +20,12 @@ My solution to the [exercise](https://github.com/xpeppers/social_networking_kata
 If you want to skip test
 > mvn clean package -Dmaven.test.skip=true
 
+Alternatively, you can download the [latest release](https://github.com/dsantarelli/social_networking_kata/releases) if you don't want to compile the project.
+
 ### How to run
 
-> java -jar target/app.jar
+> java -jar <path>/app.jar
 
-you can download the latest release if you don't want to compile the project.
 
 ## Code explanation
 
