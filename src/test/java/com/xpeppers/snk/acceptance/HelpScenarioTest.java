@@ -14,9 +14,9 @@ public class HelpScenarioTest extends AcceptanceTest {
           lines(
             "> " +
             "> ",
-            "***************************",
-            "**** HELP ¯\\_(°_o)_/¯ ****",
-            "***************************",
+            "********************",
+            "******* HELP *******",
+            "********************",
             "<COMMAND>: <syntax>",
             "",
             "* EXIT: exit",

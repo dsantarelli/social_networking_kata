@@ -10,10 +10,10 @@ public class HelpCommand implements ICommand {
 
     private static final String HELP_HEADER = 
             System.lineSeparator() +
-            "***************************" + System.lineSeparator() +
-            "**** HELP ¯\\_(°_o)_/¯ ****" + System.lineSeparator() + 
-            "***************************" + System.lineSeparator() +
-            "<COMMAND>: <syntax>"         + System.lineSeparator() +
+            "********************" + System.lineSeparator() +
+            "******* HELP *******" + System.lineSeparator() + 
+            "********************" + System.lineSeparator() +
+            "<COMMAND>: <syntax>"  + System.lineSeparator() +
             System.lineSeparator();
     
     
