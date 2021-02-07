@@ -4,7 +4,7 @@
 | main      	| [![Build Status](https://travis-ci.org/dsantarelli/social_networking_kata.svg?branch=main)](https://travis-ci.org/dsantarelli/social_networking_kata) | [![codecov](https://codecov.io/gh/dsantarelli/social_networking_kata/branch/main/graph/badge.svg)](https://codecov.io/gh/dsantarelli/social_networking_kata/branch/main) |
 
 
-#Social Networking Kata
+# Social Networking Kata
 ----------------------
 My solution to the [exercise](https://github.com/xpeppers/social_networking_kata) used by [XPeppers](https://www.xpeppers.com/) for their recruitment process.
 
@@ -15,16 +15,15 @@ My solution to the [exercise](https://github.com/xpeppers/social_networking_kata
 
 ### How to compile
 
+In the project folder run
 > mvn clean package
 
-If you want to skip test
-> mvn clean package -Dmaven.test.skip=true
-
-Alternatively, you can download the [latest release](https://github.com/dsantarelli/social_networking_kata/releases) if you don't want to compile the project.
+After packaging, you should find the `app.jar` file in the `target` folder.
+Alternatively, if you don't want to compile the project you can download the [latest release](https://github.com/dsantarelli/social_networking_kata/releases).
 
 ### How to run
 
-> java -jar <path>/app.jar
+> java -jar target/app.jar
 
 
 ## Code explanation
