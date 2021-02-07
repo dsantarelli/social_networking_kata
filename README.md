@@ -1,12 +1,13 @@
+# Social Networking Kata
+My solution to the [exercise](https://github.com/xpeppers/social_networking_kata) used by [XPeppers](https://www.xpeppers.com/) for their recruitment process.
+
+----------------------
 
 | Branch        | Build           | Coverage           |
 | ------------- |:-------------:|:-------------:|
 | main      	| [![Build Status](https://travis-ci.org/dsantarelli/social_networking_kata.svg?branch=main)](https://travis-ci.org/dsantarelli/social_networking_kata) | [![codecov](https://codecov.io/gh/dsantarelli/social_networking_kata/branch/main/graph/badge.svg)](https://codecov.io/gh/dsantarelli/social_networking_kata/branch/main) |
 
-
-# Social Networking Kata
 ----------------------
-My solution to the [exercise](https://github.com/xpeppers/social_networking_kata) used by [XPeppers](https://www.xpeppers.com/) for their recruitment process.
 
 ### Requirements
 
