@@ -56,6 +56,15 @@ class TimelineMessageFormatterTest {
     }
     
     @Test
+    void should_format_weeks_ago() {
+        var string = formatter.format(new Message("sender", "text", Instant.now().minus(8, ChronoUnit.DAYS)));        
+        assertEquals("text (1 week ago)", string);
+        
+        string = formatter.format(new Message("sender", "text", Instant.now().minus(15, ChronoUnit.DAYS)));        
+        assertEquals("text (2 weeks ago)", string);
+    }
+    
+    @Test
     void should_format_months_ago() {
         var string = formatter.format(new Message("sender", "text", Instant.now().minus(32, ChronoUnit.DAYS)));        
         assertEquals("text (1 month ago)", string);
