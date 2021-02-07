@@ -27,7 +27,7 @@ Alternatively, if you don't want to compile the project you can download the [la
 > java -jar target/app.jar
 
 
-## Code explanation
+## My coding journey
 
 This morning I accidentally spilled coffee on my shirt, therefore I choose to solve the exercise in Java.
 First of all, I tried to find a simple way to write the acceptance tests proposed by the exercise specifications.
