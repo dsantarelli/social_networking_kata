@@ -1,13 +1,10 @@
 # Social Networking Kata
 My solution to the [exercise](https://github.com/xpeppers/social_networking_kata) used by [XPeppers](https://www.xpeppers.com/) for their recruitment process.
 
-----------------------
-
 | Branch        | Build           | Coverage           |
 | ------------- |:-------------:|:-------------:|
 | main      	| [![Build Status](https://travis-ci.org/dsantarelli/social_networking_kata.svg?branch=main)](https://travis-ci.org/dsantarelli/social_networking_kata) | ![coverage](https://img.shields.io/badge/coverage-96%25-brightgreen) |
 
-----------------------
 
 ### Requirements
 
