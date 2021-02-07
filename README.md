@@ -26,6 +26,7 @@ Alternatively, if you don't want to compile the project you can download the [la
 
 > java -jar target/app.jar
 
+----------------------
 
 ## My coding journey
 
