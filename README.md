@@ -30,7 +30,7 @@ Alternatively, if you don't want to compile the project you can download the [la
 ## Code explanation
 
 This morning I accidentally spilled coffee on my shirt, therefore I choose to solve the exercise in Java.
-First of all, I tried to find a simple way to specify the acceptance tests proposed by the exercise specifications.
+First of all, I tried to find a simple way to write the acceptance tests proposed by the exercise specifications.
 Immediately I faced the need to simulate the system console in the test environment, so I created the [ICommandLineInterface](https://github.com/dsantarelli/social_networking_kata/tree/main/src/main/java/com/xpeppers/snk/ui) abstraction.
 After writing most of the acceptance tests and making them work, I noticed that I wrote a lot of code smells, so I started a refactoring that brought me up to **three macro-components**:
 
