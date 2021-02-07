@@ -1,7 +1,7 @@
 
 | Branch        | Build           | Coverage           |
 | ------------- |:-------------:|:-------------:|
-| master      | [![Build Status](https://travis-ci.org/patrykkrawczyk/TDDAndDesignPatternsExample.svg?branch=master)](https://travis-ci.org/patrykkrawczyk/TDDAndDesignPatternsExample) | [![codecov](https://codecov.io/gh/patrykkrawczyk/TDDAndDesignPatternsExample/branch/master/graph/badge.svg)](https://codecov.io/gh/patrykkrawczyk/TDDAndDesignPatternsExample/branch/master) |
+| main      	| [![Build Status](https://travis-ci.org/dsantarelli/social_networking_kata.svg?branch=main)](https://travis-ci.org/dsantarelli/social_networking_kata) | [![codecov](https://codecov.io/gh/dsantarelli/social_networking_kata/branch/main/graph/badge.svg)](https://codecov.io/gh/dsantarelli/social_networking_kata/branch/main) |
 
 
 Social Networking Kata
