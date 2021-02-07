@@ -3,16 +3,16 @@ package com.xpeppers.snk.ui;
 public class ClockingCommandLineInterface implements ICommandLineInterface {
 
     private final ICommandLineInterface cli;
-    private final int clockTime;
+    private final int clockMillis;
     
-    public ClockingCommandLineInterface(ICommandLineInterface cli, int clockTime) {
+    public ClockingCommandLineInterface(ICommandLineInterface cli, int clockMillis) {
         this.cli = cli;
-        this.clockTime = clockTime;     
+        this.clockMillis = clockMillis;     
     }
     
     @Override
     public String readLine() {
-        sleep(clockTime);
+        sleep(clockMillis);
         return cli.readLine();
     }
     
