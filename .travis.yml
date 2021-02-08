@@ -1,3 +1,6 @@
+env:
+  global:
+    - CODECOV_TOKEN="52878355-cb09-4fe3-b65a-4f2c81ac9241"
 language: java
 script: mvn clean verify test
 jdk:
