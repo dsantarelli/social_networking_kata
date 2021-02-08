@@ -9,7 +9,7 @@ class AppStartTest extends AcceptanceTest {
         test(
            // INPUT
            noLines()
-           ,           
+           ,
            // OUTPUT
            lines("> ")
         );       

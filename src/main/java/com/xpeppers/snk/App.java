@@ -50,10 +50,8 @@ public class App {
         while (true) {
             try {
                 var line = cli.readLine();
-
                 if (line == null)   break;
-                if (line.isBlank()) continue;
-
+                if (line.isBlank()) continue;                
                 lineConsumer.accept(line);               
             }
             catch (SecurityException e) { } // thrown by System.exit(); -> Do nothing here
@@ -62,7 +60,7 @@ public class App {
     }
     
     private void writeErrorMessage(Throwable e) {
-        cli.writeLine(MessageFormat.format("ERROR: {0}", e.getMessage())); // I don't care about stack trace :/
+        cli.writeLine(MessageFormat.format("ERROR: {0}", e.getMessage())); // I don't care about the stack trace :/
     }
 }
 

@@ -8,13 +8,14 @@ import com.xpeppers.snk.io.ILineWriter;
 
 public class HelpCommand implements ICommand {
 
+    private static final String NEW_LINE = System.lineSeparator();    
     private static final String HELP_HEADER = 
-            System.lineSeparator() +
-            "********************" + System.lineSeparator() +
-            "******* HELP *******" + System.lineSeparator() + 
-            "********************" + System.lineSeparator() +
-            "<COMMAND>: <syntax>"  + System.lineSeparator() +
-            System.lineSeparator();
+            NEW_LINE +
+            "********************" + NEW_LINE +
+            "******* HELP *******" + NEW_LINE + 
+            "********************" + NEW_LINE +
+            "<COMMAND>: <syntax>"  + NEW_LINE +
+            NEW_LINE;
     
     
     private final ILineWriter writer;
@@ -35,9 +36,9 @@ public class HelpCommand implements ICommand {
                 .stream()
                 .sorted((a,b) -> a.getName().compareTo(b.getName()))
                 .map(x -> MessageFormat.format("* {0}: {1}", x.getName().toUpperCase(), x.getSyntax()))
-                .collect(Collectors.joining(System.lineSeparator()))
+                .collect(Collectors.joining(NEW_LINE))
             +
-            System.lineSeparator()
+            NEW_LINE
         );
-    }
+    }    
 }

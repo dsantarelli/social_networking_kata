@@ -4,9 +4,9 @@ import com.xpeppers.snk.socialnetwork.ISocialNetwork;
 
 public class FollowCommand implements ICommand {    
         
-    private final ISocialNetwork socialNetwork;
     private final String follower;
     private final String followed;
+    private final ISocialNetwork socialNetwork;
 
     public FollowCommand(
             String follower,

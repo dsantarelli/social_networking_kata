@@ -6,10 +6,10 @@ public class ErrorScenarioTest extends AcceptanceTest {
     
     @Test
     void alice_submits_an_invalid_command() {        
-        test(                
+        test(
             // INPUT
             lines("Alice XXX Hello!")
-            ,            
+            ,
             // OUTPUT
             lines(
               "> " +

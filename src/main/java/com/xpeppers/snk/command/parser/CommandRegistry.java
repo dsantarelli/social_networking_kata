@@ -2,6 +2,7 @@ package com.xpeppers.snk.command.parser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -33,7 +34,7 @@ public class CommandRegistry implements ICommandRegistry {
     
     @Override
     public List<CommandRegistration> getRegisteredCommands() {
-        return commandRegistrations;
+        return Collections.unmodifiableList(commandRegistrations);
     }
     
     private void registerCommands() {

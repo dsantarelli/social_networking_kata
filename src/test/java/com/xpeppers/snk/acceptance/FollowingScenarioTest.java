@@ -7,7 +7,7 @@ class FollowingScenarioTest extends AcceptanceTest {
     @Test
     void charlie_follows_alice_and_bob_and_he_should_see_their_messages_on_his_wall() {        
         test(
-                
+
           // INPUT
           lines(
             "Alice -> Hello! I'm Alice.", 

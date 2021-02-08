@@ -1,6 +1,6 @@
 package com.xpeppers.snk.command;
 
-public interface ICommand {         
+public interface ICommand {
+    
     void execute();
 }
-
