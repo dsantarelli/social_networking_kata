@@ -16,7 +16,7 @@ public class CommandRegistration {
             String syntax, 
             Function<String, Boolean> matchLineFn,
             Function<String, ICommand> factoryFn) {
-        
+
         this.name = name;
         this.syntax = syntax;
         this.matchLineFn = matchLineFn;

@@ -1,4 +1,5 @@
 package com.xpeppers.snk.socialnetwork;
+import static com.xpeppers.snk.util.MessageStreamUtil.sortByTimestampDescending;
 
 import java.util.List;
 import java.util.Map;
@@ -13,18 +14,19 @@ public class InMemorySocialNetwork implements ISocialNetwork {
 
     public InMemorySocialNetwork(List<User> users) {
         this.users = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
-        users.forEach(x -> this.users.put(x.getUsername(), x));
+        users.forEach(user -> this.users.put(user.getUsername(), user));
     }
     
     @Override
-    public void postMessage(String username, String message) {       
+    public void postMessage(String username, String message) {
         getUser(username).postMessage(message);
     }
 
     @Override
     public List<Message> getTimeline(String username) {
-        return sortByTimestampDescending(getUser(username).getMessages().stream())
-                .collect(Collectors.toList());
+        return sortByTimestampDescending(
+                getUser(username).getMessages().stream())
+                    .collect(Collectors.toList());
     }
 
     @Override
@@ -48,13 +50,10 @@ public class InMemorySocialNetwork implements ISocialNetwork {
                       .collect(Collectors.toList());
     }
     
-    private User getUser(String username) { 
+    private User getUser(String username) {
         return Optional
                 .ofNullable(users.get(username))
                 .orElseThrow(() -> new UserNotFoundException(username));               
-    }
-    
-    private static Stream<Message> sortByTimestampDescending(Stream<Message> stream) {
-        return stream.sorted((a,b) -> a.getTimestamp().compareTo(b.getTimestamp()) * -1);
-    }    
+    }   
 }
+

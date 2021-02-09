@@ -1,4 +1,5 @@
 package com.xpeppers.snk.command;
+import static com.xpeppers.snk.util.MessageStreamUtil.sortByTimestampDescending;
 
 import java.util.stream.Collectors;
 
@@ -26,12 +27,10 @@ public class ReadCommand implements ICommand {
     }   
 
     @Override
-    public void execute() {        
-        var messages = socialNetwork
-                .getTimeline(username)
-                .stream()
-                .sorted((a, b) -> a.getTimestamp().compareTo(b.getTimestamp()) * -1)
-                .collect(Collectors.toList());
+    public void execute() {
+        var messages = sortByTimestampDescending(
+                socialNetwork.getTimeline(username).stream())
+                    .collect(Collectors.toList());
         
         if (messages.isEmpty()) {
             writer.writeLine("No messages found");
