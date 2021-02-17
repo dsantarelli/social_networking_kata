@@ -3,6 +3,7 @@ package com.xpeppers.snk.command.parser;
 import java.text.MessageFormat;
 
 import com.xpeppers.snk.command.ICommand;
+import com.xpeppers.snk.command.registry.ICommandRegistry;
 
 public class CommandParser implements ICommandParser {
     

@@ -18,8 +18,16 @@ public class PostCommand implements ICommand {
         this.socialNetwork = socialNetwork;
     }
 
+    public String getUsername() {
+        return username;
+    }
+    
+    public String getMessage() {
+        return message;
+    }
+    
     @Override
     public void execute() {
-        socialNetwork.postMessage(username, message);
+        socialNetwork.postMessage(getUsername(), getMessage());
     }
 }

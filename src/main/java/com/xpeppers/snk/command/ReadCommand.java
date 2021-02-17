@@ -25,11 +25,15 @@ public class ReadCommand implements ICommand {
         this.writer = writer;
         this.messageFormatter = new TimelineMessageFormatter();
     }   
-
+    
+    public String getUsername() {
+        return username;
+    }
+    
     @Override
     public void execute() {
         var messages = sortByTimestampDescending(
-                socialNetwork.getTimeline(username).stream())
+                socialNetwork.getTimeline(getUsername()).stream())
                     .collect(Collectors.toList());
         
         if (messages.isEmpty()) {
@@ -39,5 +43,5 @@ public class ReadCommand implements ICommand {
             messages.forEach(msg -> 
                 writer.writeLine(messageFormatter.format(msg)));
         }
-    }    
+    }
 }

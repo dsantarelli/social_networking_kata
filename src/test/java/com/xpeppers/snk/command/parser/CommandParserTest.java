@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.function.Function;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,8 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.xpeppers.snk.command.ICommand;
+import com.xpeppers.snk.command.registry.ICommandRegistration;
+import com.xpeppers.snk.command.registry.ICommandRegistry;
 
 @ExtendWith(MockitoExtension.class)
 class CommandParserTest {
@@ -32,12 +35,7 @@ class CommandParserTest {
     void command_found() throws UnknownCommandException {
 
         when(commandRegistry.getRegisteredCommands())
-            .thenReturn(Arrays.asList(
-                    new CommandRegistration(
-                        "testCommand", 
-                        "test", 
-                        (line) -> true, 
-                        (line) -> new TestCommand())));
+            .thenReturn(Arrays.asList(new TestCommandRegistration()));
 
         var command = parser.parse("test");
 
@@ -55,6 +53,25 @@ class CommandParserTest {
                 () -> parser.parse("test"));
     }
 
+    public static class TestCommandRegistration implements ICommandRegistration {
+
+        @Override
+        public String getName() { return "test"; }
+
+        @Override
+        public String getSyntax() { return "test"; }
+
+        @Override
+        public Function<String, Boolean> getMatchLineFn() { 
+            return (line) ->  true; 
+        }
+
+        @Override
+        public Function<String, ICommand> getFactoryFn() {
+            return (line) -> new TestCommand();
+        }       
+    }
+    
     public static class TestCommand implements ICommand {
 
         @Override

@@ -27,10 +27,14 @@ public class WallCommand implements ICommand {
         this.messageFormatter = new WallMessageFormatter();
     }
  
+    public String getUsername() {
+        return username;
+    }
+    
     @Override
     public void execute() {
         var messages = sortByTimestampDescending(
-                socialNetwork.getWall(username).stream())
+                socialNetwork.getWall(getUsername()).stream())
                     .collect(Collectors.toList());
         
         if (messages.isEmpty()) {

@@ -18,8 +18,16 @@ public class FollowCommand implements ICommand {
         this.socialNetwork = socialNetwork;
     }
 
+    public String getFollower() {
+        return follower;
+    }
+
+    public String getFollowed() {
+        return followed;
+    }    
+    
     @Override
     public void execute() {       
-        socialNetwork.follow(follower, followed);
-    }    
+        socialNetwork.follow(getFollower(), getFollowed());
+    }
 }

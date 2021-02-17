@@ -3,7 +3,7 @@ package com.xpeppers.snk.command;
 import java.text.MessageFormat;
 import java.util.stream.Collectors;
 
-import com.xpeppers.snk.command.parser.ICommandRegistry;
+import com.xpeppers.snk.command.registry.ICommandRegistry;
 import com.xpeppers.snk.io.ILineWriter;
 
 public class HelpCommand implements ICommand {

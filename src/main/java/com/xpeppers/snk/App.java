@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 
 import com.xpeppers.snk.command.parser.CommandParser;
-import com.xpeppers.snk.command.parser.CommandRegistry;
 import com.xpeppers.snk.command.parser.UnknownCommandException;
+import com.xpeppers.snk.command.registry.CommandRegistry;
 import com.xpeppers.snk.socialnetwork.InMemorySocialNetwork;
 import com.xpeppers.snk.socialnetwork.User;
 import com.xpeppers.snk.ui.CommandLineInterface;
