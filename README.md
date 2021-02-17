@@ -39,7 +39,7 @@ The application starts through the [App](https://github.com/dsantarelli/social_n
 
 ### Improvements
 
-* In the [CommandParser](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/CommandParser.java), I didn't want to implement the usual factory with a lot of `if/else`, so I tried to introduce a [CommandRegistry](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/CommandRegistry.java). The aim was to find a more flexible solution so that the command configurations could be injected into the parser from an external source. The overall architecture could be summarized through the following image:
+* In the [CommandParser](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/parser/CommandParser.java), I didn't want to implement the usual factory with a lot of `if/else`, so I tried to introduce a [CommandRegistry](https://github.com/dsantarelli/social_networking_kata/blob/main/src/main/java/com/xpeppers/snk/command/registry/CommandRegistry.java). The aim was to find a more flexible solution so that the command configurations could be injected into the parser from an external source. The overall architecture could be summarized through the following image:
 
 ![](kata.png)
 
